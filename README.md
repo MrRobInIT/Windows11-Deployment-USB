@@ -52,10 +52,10 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 
 ## Supported Models
 - Dell Latitude 5440
-- Dell Latitude 7440
-- Dell Precision 3581
-- Dell OptiPlex 7010
-- Dell OptiPlex 7020
+- Dell Latitude 5550
+- Dell Latitude PRO16250
+- Dell PRO QCM1250
+- Dell OptiPlex 7020Micro
 
 (Add additional models by creating corresponding driver folders)
 
@@ -70,16 +70,16 @@ Place your split image files in:
 
 ### Your Driver Files (Not Included)
 Organize drivers by model in:
-- `Data_Partition/Drivers/Latitude_5440/`
-- `Data_Partition/Drivers/Latitude_7440/`
-- `Data_Partition/Drivers/Precision_3581/`
-- `Data_Partition/Drivers/OptiPlex_7010/`
-- `Data_Partition/Drivers/OptiPlex_7020/`
+- `Data_Partition/Drivers/Latitude-5440/`
+- `Data_Partition/Drivers/Latitude-5550/`
+- `Data_Partition/Drivers/Latitude-PRO16250/`
+- `Data_Partition/Drivers/PRO-QCM1250/`
+- `Data_Partition/Drivers/OptiPlex-7020Micro/`
 
 ### Your BIOS Updates (Not Included)
 Organize BIOS updates by model in:
-- `Data_Partition/BIOS/Latitude_5440/`
-- `Data_Partition/BIOS/Latitude_7440/`
+- `Data_Partition/BIOS/Latitude-5440/`
+- `Data_Partition/BIOS/Latitude-5550/`
 - etc.
 
 ## Deployment Time
