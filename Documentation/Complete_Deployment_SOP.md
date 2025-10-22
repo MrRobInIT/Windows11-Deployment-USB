@@ -185,11 +185,11 @@ P:\
 ```
 D:\
 ├── Drivers\
-│   ├── Latitude_5440\
-│   ├── Latitude_7440\
-│   ├── Precision_3581\
-│   ├── OptiPlex_7010\
-│   └── OptiPlex_7020\
+│   ├── Latitude-5440\
+│   ├── Latitude-5550\
+│   ├── Latitude-PRO16250\
+│   ├── PRO-QCM1250\
+│   └── OptiPlex-7020Micro\
 ├── Apps\
 │   └── (additional apps if needed)
 └── BIOS\
