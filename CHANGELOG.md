@@ -27,7 +27,7 @@
 
 ### Supported Models
 - Dell Latitude 5440
-- Dell Latitude 7440
-- Dell Precision 3581
-- Dell OptiPlex 7010
-- Dell OptiPlex 7020
+- Dell Latitude 5550
+- Dell Latitude Pro
+- Dell PRO QCM1250
+- Dell OptiPlex 7020Micro
