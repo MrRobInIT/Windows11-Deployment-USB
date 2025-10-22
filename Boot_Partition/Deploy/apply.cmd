@@ -48,11 +48,11 @@ echo.
 
 REM Map model to driver folder
 set DRIVER_FOLDER=
-if /i "%MODEL%"=="Latitude 5440" set DRIVER_FOLDER=Latitude_5440
-if /i "%MODEL%"=="Latitude 7440" set DRIVER_FOLDER=Latitude_7440
-if /i "%MODEL%"=="Precision 3581" set DRIVER_FOLDER=Precision_3581
-if /i "%MODEL%"=="OptiPlex 7010" set DRIVER_FOLDER=OptiPlex_7010
-if /i "%MODEL%"=="OptiPlex 7020" set DRIVER_FOLDER=OptiPlex_7020
+if /i "%MODEL%"=="Latitude 5440" set DRIVER_FOLDER=Latitude-5440
+if /i "%MODEL%"=="Latitude 5550" set DRIVER_FOLDER=Latitude-5550
+if /i "%MODEL%"=="Latitude Pro" set DRIVER_FOLDER=Latitude-PRO16250
+if /i "%MODEL%"=="PRO QCM1250" set DRIVER_FOLDER=PRO-QCM1250
+if /i "%MODEL%"=="OptiPlex 7020" set DRIVER_FOLDER=OptiPlex-7020Micro
 
 if "%DRIVER_FOLDER%"=="" (
     echo WARNING: Unknown model. Driver injection may fail.
@@ -99,18 +99,18 @@ if errorlevel 1 (
 
 REM Inject drivers if model detected
 if not "%DRIVER_FOLDER%"=="" (
-    if exist "%DATA_DRIVE%\Drivers\%DRIVER_FOLDER%" (
+    if exist "%DATA_DRIVE%\Drivers\Dell\%DRIVER_FOLDER%" (
         echo.
         echo Injecting drivers for %MODEL%...
         echo This may take 10-20 minutes...
-        dism /Image:W:\ /Add-Driver /Driver:%DATA_DRIVE%\Drivers\%DRIVER_FOLDER% /Recurse /ForceUnsigned
+        dism /Image:W:\ /Add-Driver /Driver:%DATA_DRIVE%\Drivers\Dell\%DRIVER_FOLDER% /Recurse /ForceUnsigned
         if errorlevel 1 (
             echo WARNING: Some drivers failed to inject. Continuing...
         ) else (
             echo Driver injection completed successfully.
         )
     ) else (
-        echo WARNING: Driver folder not found: %DATA_DRIVE%\Drivers\%DRIVER_FOLDER%
+        echo WARNING: Driver folder not found: %DATA_DRIVE%\Drivers\Dell\%DRIVER_FOLDER%
     )
 )
 
