@@ -27,17 +27,17 @@ echo System Model: %MODEL% >> %LOGFILE%
 
 REM Map model to driver folder
 set DRIVER_FOLDER=
-if /i "%MODEL%"=="Latitude 5440" set DRIVER_FOLDER=Latitude_5440
-if /i "%MODEL%"=="Latitude 7440" set DRIVER_FOLDER=Latitude_7440
-if /i "%MODEL%"=="Precision 3581" set DRIVER_FOLDER=Precision_3581
-if /i "%MODEL%"=="OptiPlex 7010" set DRIVER_FOLDER=OptiPlex_7010
-if /i "%MODEL%"=="OptiPlex 7020" set DRIVER_FOLDER=OptiPlex_7020
+if /i "%MODEL%"=="Latitude 5440" set DRIVER_FOLDER=Latitude-5440
+if /i "%MODEL%"=="Latitude 5550" set DRIVER_FOLDER=Latitude-5550
+if /i "%MODEL%"=="Latitude Pro" set DRIVER_FOLDER=Latitude-PRO16250
+if /i "%MODEL%"=="PRO QCM1250" set DRIVER_FOLDER=PRO-QCM1250
+if /i "%MODEL%"=="OptiPlex 7020" set DRIVER_FOLDER=OptiPlex-7020Micro
 
 REM Install remaining drivers via PnPUtil
 if not "%DRIVER_FOLDER%"=="" (
-    if exist "%DATA_DRIVE%\Drivers\%DRIVER_FOLDER%" (
-        echo Installing drivers from %DATA_DRIVE%\Drivers\%DRIVER_FOLDER% >> %LOGFILE%
-        pnputil /add-driver %DATA_DRIVE%\Drivers\%DRIVER_FOLDER%\*.inf /subdirs /install >> %LOGFILE% 2>&1
+    if exist "%DATA_DRIVE%\Drivers\Dell\%DRIVER_FOLDER%" (
+        echo Installing drivers from %DATA_DRIVE%\Drivers\Dell\%DRIVER_FOLDER% >> %LOGFILE%
+        pnputil /add-driver %DATA_DRIVE%\Drivers\Dell\%DRIVER_FOLDER%\*.inf /subdirs /install >> %LOGFILE% 2>&1
     )
 )
 
