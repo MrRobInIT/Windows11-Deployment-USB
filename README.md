@@ -97,7 +97,7 @@ MIT License - Feel free to modify and distribute
 Pull requests welcome for additional model support or improvements.
 
 ## Author
-Dell Endpoint Windows Image Deployment Engineer
+RM 24OCT2025
 
 ## Version
 1.0.0 - Initial Release
