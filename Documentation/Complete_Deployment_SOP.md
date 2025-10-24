@@ -45,6 +45,7 @@ notepad C:\WinPE_amd64\mount\Windows\System32\startnet.cmd
 ```batch
 @echo off
 wpeinit
+color 1F
 echo.
 echo ============================================
 echo   Windows 11 Deployment - Dell Systems
@@ -52,7 +53,7 @@ echo ============================================
 echo.
 echo Starting deployment script...
 echo.
-X:\Deploy\apply.cmd
+D:\Deploy\apply.cmd
 ```
 
 6. **Commit changes and unmount:**
