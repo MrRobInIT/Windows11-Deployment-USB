@@ -54,7 +54,7 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 - Dell Latitude 5440
 - Dell Latitude 5540
 - Dell Latitude 5550
-- Dell Latitude PRO16250
+- Dell Pro 16 Plus PB16250
 - Dell PRO QCM1250
 - Dell OptiPlex 7020Micro
 
@@ -72,8 +72,9 @@ Place your split image files in:
 ### Your Driver Files (Not Included)
 Organize drivers by model in:
 - `Data_Partition/Drivers/Latitude-5440/`
+- `Data_Partition/Drivers/Latitude-5540/`
 - `Data_Partition/Drivers/Latitude-5550/`
-- `Data_Partition/Drivers/Latitude-PRO16250/`
+- `Data_Partition/Drivers/PRO16250/`
 - `Data_Partition/Drivers/PRO-QCM1250/`
 - `Data_Partition/Drivers/OptiPlex-7020Micro/`
 
