@@ -53,7 +53,32 @@ echo ============================================
 echo.
 echo Starting deployment script...
 echo.
-D:\Deploy\apply.cmd
+
+echo Detecting USB partitions...
+for %%D in (C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
+    if exist %%D:\Deploy\apply.cmd (
+        set BOOT_DRIVE=%%D:
+        echo Boot partition found: %%D:
+    )
+    if exist %%D:\Drivers\ (
+        set DATA_DRIVE=%%D:
+        echo Data partition found: %%D:
+    )
+)
+
+if "%BOOT_DRIVE%"=="" (
+    echo ERROR: Boot partition not found!
+    pause
+    exit /b 1
+)
+
+if "%DATA_DRIVE%"=="" (
+    echo ERROR: Data partition with drivers not found!
+    pause
+    exit /b 1
+)
+
+%BOOT_DRIVE%\Deploy\apply.cmd
 ```
 
 6. **Commit changes and unmount:**
@@ -208,15 +233,15 @@ All script files are provided in the Boot_Partition and Data_Partition folders.
 
 ### Steps
 
-1. **Copy files to USB:**
-   - Copy split image files (install*.swm) to `P:\Deploy\Images\`
-   - Copy apply.cmd to `P:\Deploy\`
-   - Copy createdisk_GPT.txt to `P:\Deploy\`
-   - Copy unattend.xml to `P:\Deploy\`
-   - Copy PostOOBE.cmd to `P:\Deploy\PostOOBE\`
-   - Copy all driver folders to `D:\Drivers\`
-   - Copy BIOS updates to `D:\BIOS\` (organized by model)
-   - Copy additional apps to `D:\Apps\` if needed
+1. **RoboCopy files to USB:**
+   - RoboCopy split image files (install*.swm) to `P:\Deploy\Images\`
+   - RoboCopy apply.cmd to `P:\Deploy\`
+   - RoboCopy createdisk_GPT.txt to `P:\Deploy\`
+   - RoboCopy unattend.xml to `P:\Deploy\`
+   - RoboCopy PostOOBE.cmd to `P:\Deploy\PostOOBE\`
+   - RoboCopy all driver folders to `D:\Drivers\`
+   - RoboCopy BIOS updates to `D:\BIOS\` (organized by model)
+   - RoboCopy additional apps to `D:\Apps\` if needed
 
 2. **Boot target system from USB:**
    - Insert USB into target Dell system
