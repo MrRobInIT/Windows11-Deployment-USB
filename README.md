@@ -90,7 +90,7 @@ Organize BIOS updates by model in:
 ## Documentation
 
 - Complete Deployment SOP: [Documentation/Complete_Deployment_SOP.md](https://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/Complete_Deployment_SOP.md)
-- ISO Creation from Master USB (ImgBurn): [Documentation/SOP_Create_ISO_From_USB_ImgBurn.md](Dhttps://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/SOP_Create_ISO_From_USB_ImgBurn.md)
+- ISO Creation from Master USB (ImgBurn): [Documentation/SOP_Create_ISO_From_USB_ImgBurn.md](https://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/SOP_Create_ISO_From_USB_ImgBurn.md)
 - Burn ISO to 64GB USBs (Rufus): [Documentation/SOP_Burn_ISO_to_USB_Rufus.md](https://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/SOP_Burn_ISO_to_USB_Rufus.md)
 
 Related:
