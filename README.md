@@ -26,7 +26,7 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 ## Quick Start
 
 1. **Review Documentation**
-   - Read `Complete_Deployment_SOP.md` for full instructions
+   - Read [Complete_Deployment_SOP.md](https://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/Complete_Deployment_SOP.md) for full instructions
    - Review all scripts before deployment
 
 2. **Prepare USB Drive**
@@ -97,7 +97,7 @@ Related:
 - Master USB Build SOP (WinPE, image prep/capture, `startnet.cmd`, `apply.cmd`, `createdisk_GPT.txt`, drivers, split WIMs).
 
 ## Troubleshooting
-See `Complete_Deployment_SOP.md` for detailed troubleshooting steps.
+See [Complete_Deployment_SOP.md](https://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/Complete_Deployment_SOP.md) for detailed troubleshooting steps.
 
 ## License
 MIT License - Feel free to modify and distribute
