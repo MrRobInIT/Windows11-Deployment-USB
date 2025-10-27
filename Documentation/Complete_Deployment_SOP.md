@@ -244,6 +244,7 @@ All script files are provided in the Boot_Partition and Data_Partition folders.
    - RoboCopy additional apps to `D:\Apps\` if needed
 
 2. **Boot target system from USB:**
+   - Connect to Wired network for Doman Join
    - Insert USB into target Dell system
    - Power on and press F12 for boot menu
    - Select USB drive (UEFI boot)
