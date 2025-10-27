@@ -192,7 +192,7 @@ D:\
 │   |   ├── Latitude-5550\
 │   |   ├── Latitude-PRO16250\
 │   |   ├── PRO-QCM1250\
-│   |  └── OptiPlex-7020Micro\
+│   |   └── OptiPlex-7020Micro\
 ├── Apps\
 │   └── (additional apps if needed)
 └── BIOS\
