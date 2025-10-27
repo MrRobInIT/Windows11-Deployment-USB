@@ -28,6 +28,7 @@ echo System Model: %MODEL% >> %LOGFILE%
 REM Map model to driver folder
 set DRIVER_FOLDER=
 if /i "%MODEL%"=="Latitude 5440" set DRIVER_FOLDER=Latitude-5440
+if /i "%MODEL%"=="Latitude 5540" set DRIVER_FOLDER=Latitude-5540
 if /i "%MODEL%"=="Latitude 5550" set DRIVER_FOLDER=Latitude-5550
 if /i "%MODEL%"=="Latitude Pro" set DRIVER_FOLDER=Latitude-PRO16250
 if /i "%MODEL%"=="PRO QCM1250" set DRIVER_FOLDER=PRO-QCM1250
