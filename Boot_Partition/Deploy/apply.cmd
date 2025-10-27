@@ -1,6 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
+color 1F
 echo.
 echo ============================================
 echo   Windows 11 Deployment Script
@@ -49,6 +50,7 @@ echo.
 REM Map model to driver folder
 set DRIVER_FOLDER=
 if /i "%MODEL%"=="Latitude 5440" set DRIVER_FOLDER=Latitude-5440
+if /i "%MODEL%"=="Latitude 5540" set DRIVER_FOLDER=Latitude-5540
 if /i "%MODEL%"=="Latitude 5550" set DRIVER_FOLDER=Latitude-5550
 if /i "%MODEL%"=="Latitude Pro" set DRIVER_FOLDER=Latitude-PRO16250
 if /i "%MODEL%"=="PRO QCM1250" set DRIVER_FOLDER=PRO-QCM1250
@@ -112,6 +114,7 @@ if errorlevel 1 (
 
 REM Inject drivers if model detected
 cls
+color 9F
 if not "%DRIVER_FOLDER%"=="" (
     if exist "%DATA_DRIVE%\Drivers\Dell\%DRIVER_FOLDER%" (
         echo.
@@ -139,14 +142,14 @@ if exist %BOOT_DRIVE%\Deploy\PostOOBE (
     )
 )
 
-color 9E
+color AF
 echo.
-echo ============================================
-echo   Deployment Complete!
-echo ============================================
+echo. ============================================
+echo.            Deployment Complete!
+echo.          Press enter to reboot...
+echo.      Remove USB when computer reboots
+echo. ============================================
 echo.
-echo The system will reboot in 10 seconds...
-echo Remove the USB drive after reboot.
 echo.
-timeout /t 10
+pause
 wpeutil reboot
