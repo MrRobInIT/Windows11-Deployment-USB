@@ -87,6 +87,15 @@ Organize BIOS updates by model in:
 - Driver injection: 10-20 minutes
 - Total deployment: 30-45 minutes
 
+## Documentation
+
+- Complete Deployment SOP: [Documentation/Complete_Deployment_SOP.md](https://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/Complete_Deployment_SOP.md)
+- ISO Creation from Master USB (ImgBurn): [Documentation/SOP_Create_ISO_From_USB_ImgBurn.md](Dhttps://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/SOP_Create_ISO_From_USB_ImgBurn.md)
+- Burn ISO to 64GB USBs (Rufus): [Documentation/SOP_Burn_ISO_to_USB_Rufus.md](https://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/SOP_Burn_ISO_to_USB_Rufus.md)
+
+Related:
+- Master USB Build SOP (WinPE, image prep/capture, `startnet.cmd`, `apply.cmd`, `createdisk_GPT.txt`, drivers, split WIMs).
+
 ## Troubleshooting
 See `Complete_Deployment_SOP.md` for detailed troubleshooting steps.
 
