@@ -1,8 +1,8 @@
 Place your split image files here:
-- install.swm
-- install2.swm
-- install3.swm
-- install4.swm
+- Win11Gold.swm
+- Win11Gold2.swm
+- Win11Gold3.swm
+- Win11Gold4.swm
 etc.
 
 These files are created using DISM split-image command.
