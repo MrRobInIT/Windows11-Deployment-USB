@@ -52,6 +52,7 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 
 ## Supported Models
 - Dell Latitude 5440
+- Dell Latitude 5540
 - Dell Latitude 5550
 - Dell Latitude PRO16250
 - Dell PRO QCM1250
