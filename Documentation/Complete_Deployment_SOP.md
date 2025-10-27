@@ -173,10 +173,10 @@ P:\
 │   ├── createdisk_GPT.txt
 │   ├── unattend.xml
 │   ├── Images\
-│   │   ├── install.swm
-│   │   ├── install2.swm
-│   │   ├── install3.swm
-│   │   └── install4.swm
+│   │   ├── Win11Gold.swm
+│   │   ├── Win11Gold2.swm
+│   │   ├── Win11Gold3.swm
+│   │   └── Win11Gold4.swm
 │   └── PostOOBE\
 │       └── PostOOBE.cmd
 └── bootmgr
@@ -186,11 +186,13 @@ P:\
 ```
 D:\
 ├── Drivers\
-│   ├── Latitude-5440\
-│   ├── Latitude-5550\
-│   ├── Latitude-PRO16250\
-│   ├── PRO-QCM1250\
-│   └── OptiPlex-7020Micro\
+|   ├── Dell\
+│   |   ├── Latitude-5440\
+│   |   ├── Latitude-5540\
+│   |   ├── Latitude-5550\
+│   |   ├── Latitude-PRO16250\
+│   |   ├── PRO-QCM1250\
+│   |  └── OptiPlex-7020Micro\
 ├── Apps\
 │   └── (additional apps if needed)
 └── BIOS\
