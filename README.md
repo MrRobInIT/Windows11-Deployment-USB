@@ -54,8 +54,10 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 - Dell Latitude 5440
 - Dell Latitude 5540
 - Dell Latitude 5550
+- Dell Pro 16 PC16250
 - Dell Pro 16 Plus PB16250
 - Dell PRO QCM1250
+- Dell Pro Micro QCM1250
 - Dell OptiPlex 7020Micro
 
 (Add additional models by creating corresponding driver folders)
