@@ -99,24 +99,18 @@ clean
 create partition primary size=32000
 format fs=fat32 quick label="WinPE_Boot"
 active
-assign letter=P
+assign letter=F
 create partition primary
 format fs=ntfs quick label="Drivers_Apps"
-assign letter=D
+assign letter=G
 exit
 ```
 
-8. **Copy WinPE files to boot partition:**
+8. **Make WinPE Media to boot partition:**
 ```cmd
-xcopy C:\WinPE_amd64\media\*.* P:\ /E /H /F
+MakeWinPEMedia /UFD C:\WinPE_amd64 F:
 ```
 
-9. **Make USB bootable:**
-```cmd
-bootsect /nt60 P: /force /mbr
-```
-
----
 
 ## Part 2: Image Preparation and Capture
 
@@ -234,15 +228,9 @@ All script files are provided in the Boot_Partition and Data_Partition folders.
 ### Steps
 
 1. **RoboCopy files to USB:**
-   - RoboCopy split image files (install*.swm) to `P:\Deploy\Images\`
-   - RoboCopy apply.cmd to `P:\Deploy\`
-   - RoboCopy createdisk_GPT.txt to `P:\Deploy\`
-   - RoboCopy unattend.xml to `P:\Deploy\`
-   - RoboCopy PostOOBE.cmd to `P:\Deploy\PostOOBE\`
-   - RoboCopy all driver folders to `D:\Drivers\`
-   - RoboCopy BIOS updates to `D:\BIOS\` (organized by model)
-   - RoboCopy additional apps to `D:\Apps\` if needed
-
+   - robocopy `E:\GOLD_Image\USB\Boot\Deploy F:\Deploy /E`
+   - robocopy `E:\GOLD_Image\USB\Data G:\ /E`
+   
 2. **Boot target system from USB:**
    - Connect to Wired network for Doman Join
    - Insert USB into target Dell system
