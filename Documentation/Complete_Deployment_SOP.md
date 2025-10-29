@@ -180,7 +180,7 @@ Dismount-VHD -Path "C:\Hyper-V\GOLD-IMAGE.vhdx"
 
 ## Part 3: USB Structure and Scripts
 
-### Boot Partition (P:\ - FAT32) Structure:
+### Boot Partition (F:\ - FAT32) Structure:
 ```
 P:\
 ├── Boot\
@@ -201,7 +201,7 @@ P:\
 └── bootmgr
 ```
 
-### Second Partition (D:\ - NTFS) Structure:
+### Second Partition (G:\ - NTFS) Structure:
 ```
 D:\
 ├── Drivers\
