@@ -198,6 +198,7 @@ P:\
 │   │   └── Win11Gold4.swm
 │   └── PostOOBE\
 │       └── PostOOBE.cmd
+│── (custom package name).ppkg
 └── bootmgr
 ```
 
@@ -205,13 +206,13 @@ P:\
 ```
 D:\
 ├── Drivers\
-|   ├── Dell\
-│   |   ├── Latitude-5440\
-│   |   ├── Latitude-5540\
-│   |   ├── Latitude-5550\
-│   |   ├── Latitude-PRO16250\
-│   |   ├── PRO-QCM1250\
-│   |   └── OptiPlex-7020Micro\
+|   ├── Latitude-5440\
+│   ├── Latitude-5540\
+│   ├── Latitude-5550\
+│   ├── Latitude-PRO16250\
+│   ├── PRO-QCM1250\
+│   ├── OptiPlex-7020Micro\
+|   └── Lenovo
 ├── Apps\
 │   └── (additional apps if needed)
 └── BIOS\
@@ -249,7 +250,7 @@ All script files are provided in the Boot_Partition and Data_Partition folders.
    - System reboots automatically
 
 4. **First boot (OOBE):**
-   - Complete Windows OOBE
+   - OOBE detects Custom Package to join domain, create local account and rename machine
    - PostOOBE.cmd runs automatically during specialize pass
    - Remaining drivers installed via PnPUtil
    - BIOS updates applied
