@@ -59,6 +59,7 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 - Dell PRO QCM1250
 - Dell Pro Micro QCM1250
 - Dell OptiPlex 7020Micro
+- Lenovo X1
 
 (Add additional models by creating corresponding driver folders)
 
@@ -79,6 +80,7 @@ Organize drivers by model in:
 - `Data_Partition/Drivers/PRO16250/`
 - `Data_Partition/Drivers/PRO-QCM1250/`
 - `Data_Partition/Drivers/OptiPlex-7020Micro/`
+- - `Data_Partition/Drivers/Lenovo/`
 
 ### Your BIOS Updates (Not Included)
 Organize BIOS updates by model in:
