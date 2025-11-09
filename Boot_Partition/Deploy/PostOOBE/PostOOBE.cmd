@@ -27,6 +27,7 @@ echo System Model: %MODEL% >> %LOGFILE%
 
 REM Map model to driver folder
 set DRIVER_FOLDER=
+if /i "%MODEL%"=="Latitude 3440" set DRIVER_FOLDER=Latitude-3440
 if /i "%MODEL%"=="Latitude 5440" set DRIVER_FOLDER=Latitude-5440
 if /i "%MODEL%"=="Latitude 5540" set DRIVER_FOLDER=Latitude-5540
 if /i "%MODEL%"=="Latitude 5550" set DRIVER_FOLDER=Latitude-5550
@@ -34,7 +35,7 @@ if /i "%MODEL%"=="Dell Pro 16 Plus PB16250" set DRIVER_FOLDER=PRO16250
 if /i "%MODEL%"=="Dell Pro 16 PC16250" set DRIVER_FOLDER=PRO16250
 if /i "%MODEL%"=="Dell Pro Micro QCM1250" set DRIVER_FOLDER=PRO-QCM1250
 if /i "%MODEL%"=="Dell Pro QCM1250" set DRIVER_FOLDER=PRO-QCM1250
-if /i "%MODEL%"=="OptiPlex 7020" set DRIVER_FOLDER=OptiPlex-7020Micro
+if /i "%MODEL%"=="OptiPlex Micro 7020" set DRIVER_FOLDER=OptiPlex-7020Micro
 if /i "%MODEL%"=="21E3008BUS" set DRIVER_FOLDER=Lenovo
 
 REM Install remaining drivers via PnPUtil
