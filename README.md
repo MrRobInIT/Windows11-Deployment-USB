@@ -51,6 +51,7 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 - UEFI boot mode enabled
 
 ## Supported Models
+- Dell Latitude 3440
 - Dell Latitude 5440
 - Dell Latitude 5540
 - Dell Latitude 5550
@@ -74,6 +75,7 @@ Place your split image files in:
 
 ### Your Driver Files (Not Included)
 Organize drivers by model in:
+- `Data_Partition/Drivers/Latitude-3440/`
 - `Data_Partition/Drivers/Latitude-5440/`
 - `Data_Partition/Drivers/Latitude-5540/`
 - `Data_Partition/Drivers/Latitude-5550/`
