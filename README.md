@@ -1,4 +1,4 @@
-# Windows 11 Deployment USB for Dell Systems
+# Windows 11 Deployment USB for Dell & Lenovo Systems
 
 ## Overview
 Complete offline USB deployment solution for Dell Latitude, Precision laptops and OptiPlex, Precision desktops with automated driver injection and BIOS updates.
