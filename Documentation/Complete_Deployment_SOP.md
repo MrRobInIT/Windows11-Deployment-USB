@@ -156,14 +156,14 @@ C:\Windows\System32\Sysprep\sysprep.exe /generalize /oobe /shutdown
 
 7. **Mount VHDX on host after shutdown:**
 ```powershell
-Mount-VHD -Path "C:\Hyper-V\GOLD-IMAGE.vhdx"
+Mount-VHD -Path C:\Tools\GOLD_Image\HyperV_VHD\Win11Gold.vhdx
 ```
 
 8. **Capture image with DISM:**
 
-Identify mounted drive letter (assume E:):
+Identify mounted drive letter (assume W:):
 ```cmd
-Dism /Capture-Image /ImageFile:E:\GOLD_IMAGE\Deploy\Images\install.wim /CaptureDir:E:\ /Name:"Windows 11 Enterprise Gold" /Description:"Windows 11 with Apps and Updates" /Compress:max
+dism /Capture-Image /ImageFile:"E:\GOLD_Image\IMG\Win11Gold.wim" /CaptureDir:W:\ /Name:"HAG Windows 11 Pro Gold" /Description:"Windows 11 with Apps and Updates" /Compress:max
 ```
 
 9. **Split image for FAT32:**
@@ -206,13 +206,15 @@ P:\
 ```
 D:\
 ├── Drivers\
-|   ├── Latitude-5440\
+|   ├── Latitude-3440\
+|   ├── Latitude-3520\
 |   ├── Latitude-5440\
 │   ├── Latitude-5540\
 │   ├── Latitude-5550\
 │   ├── Latitude-PRO16250\
 │   ├── PRO-QCM1250\
 │   ├── OptiPlex-7020Micro\
+|   ├── PRO-QCS1250\
 |   └── Lenovo
 ├── Apps\
 │   └── (additional apps if needed)
