@@ -144,10 +144,46 @@ MakeWinPEMedia /UFD C:\WinPE_amd64 F:
    - Repeat until no updates remain
 
 5. **Clean up system:**
+   - Create a temporary “cleanup” admin account
+   - Since you cannot delete the profile you’re currently using, you’ll need a short-term administrative account.
+        Open Command Prompt (Admin) or PowerShell (Admin)
 ```cmd
-cleanmgr /sageset:1
-cleanmgr /sagerun:1
+net user Cleanup P@ssw0rd! /add
+net localgroup administrators Cleanup /add
 ```
+
+   - Log off your current admin account.
+
+   - Log in as CleanupAdmin.
+   - Delete the original build account
+   - Run these commands to scrub “Recent Files”, Run box entries, Explorer history, and prefetch:
+
+   - File Explorer / Run history:
+```cmd
+del /f /q "%AppData%\Microsoft\Windows\Recent\*"
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU" /f
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths" /f
+```
+   - Quick Access & jump lists:
+```cmd
+del /f /q "%AppData%\Microsoft\Windows\Recent\AutomaticDestinations\*"
+del /f /q "%AppData%\Microsoft\Windows\Recent\CustomDestinations\*"
+```
+   - Prefetch cache:
+```cmd
+del /f /q C:\Windows\Prefetch\*.*
+```
+   - Temp files:
+```cmd
+del /f /s /q %TEMP%\*
+del /f /s /q C:\Windows\Temp\*
+```
+   - Clear additional traces (optional but recommended)
+```cmd
+wevtutil el | ForEach-Object {wevtutil cl "$_"}
+Dism /Online /Cleanup-Image /StartComponentCleanup /ResetBase
+```
+6. 
 
 6. **Run Sysprep:**
 ```cmd
@@ -168,12 +204,12 @@ dism /Capture-Image /ImageFile:"E:\GOLD_Image\IMG\Win11Gold.wim" /CaptureDir:W:\
 
 9. **Split image for FAT32:**
 ```cmd
-Dism /Split-Image /ImageFile:E:\GOLD_IMAGE\Deploy\Images\install.wim /SWMFile:E:\GOLD_IMAGE\Deploy\Images\install.swm /FileSize:4000
+dism /Split-Image /ImageFile:"E:\GOLD_Image\IMG\Win11Gold.wim" /SWMFile:"E:\GOLD_Image\USB\Boot\Deploy\Images\Win11Gold.swm" /FileSize:3800
 ```
 
 10. **Dismount VHDX:**
 ```powershell
-Dismount-VHD -Path "C:\Hyper-V\GOLD-IMAGE.vhdx"
+Dismount-VHD -Path "C:\Tools\GOLD_Image\HyperV_VHD\Win11Gold.vhdx"
 ```
 
 ---
@@ -214,7 +250,7 @@ D:\
 │   ├── Latitude-PRO16250\
 │   ├── PRO-QCM1250\
 │   ├── OptiPlex-7020Micro\
-|   ├── PRO-QCS1250\
+|   ├── PRO-QxS1250\
 |   └── Lenovo
 ├── Apps\
 │   └── (additional apps if needed)
