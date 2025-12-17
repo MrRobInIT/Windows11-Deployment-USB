@@ -10,7 +10,7 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 - Post-OOBE driver installation and BIOS updates
 - Unattended deployment with minimal user interaction
 
-## USB Structure
+## USB Structure - 128GB
 
 ### Boot Partition (FAT32 - 32GB)
 - WinPE bootable environment
@@ -18,8 +18,8 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 - Deployment scripts
 - PostOOBE automation scripts
 
-### Data Partition (NTFS - 32GB)
-- Model-specific driver packages (29GB)
+### Data Partition (NTFS - 96GB)
+- Model-specific driver packages (50GB)
 - BIOS update packages
 - Additional applications
 
