@@ -59,6 +59,9 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 - Dell Pro 16 Plus PB16250
 - Dell PRO QCM1250
 - Dell Pro Micro QCM1250
+- Dell Pro Slim Plus QBS1250
+- Dell Pro Slim QCS1250
+- Dell Pro Slim QCS1255
 - Dell OptiPlex 7020Micro
 - Lenovo X1
 
