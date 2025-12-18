@@ -268,16 +268,18 @@ All script files are provided in the Boot_Partition and Data_Partition folders.
 ### Steps
 
 1. **RoboCopy files to USB:**
-   - robocopy `E:\GOLD_Image\USB\Boot\Deploy F:\Deploy /E`
-   - robocopy `E:\GOLD_Image\USB\Data G:\ /E`
+```cmd
+   robocopy `E:\GOLD_Image\USB\Boot\Deploy D:\Deploy /E`
+   robocopy `E:\GOLD_Image\USB\Data F:\ /E`
+```
    
-2. **Boot target system from USB:**
+3. **Boot target system from USB:**
    - Connect to Wired network for Doman Join
    - Insert USB into target Dell system
    - Power on and press F12 for boot menu
    - Select USB drive (UEFI boot)
 
-3. **Automated deployment:**
+4. **Automated deployment:**
    - WinPE boots automatically
    - startnet.cmd launches apply.cmd
    - Script detects both USB partitions
@@ -288,14 +290,14 @@ All script files are provided in the Boot_Partition and Data_Partition folders.
    - PostOOBE scripts are copied
    - System reboots automatically
 
-4. **First boot (OOBE):**
+5. **First boot (OOBE):**
    - OOBE detects Custom Package to join domain, create local account and rename machine
    - PostOOBE.cmd runs automatically during specialize pass
    - Remaining drivers installed via PnPUtil
    - BIOS updates applied
    - PostOOBE folder self-deletes
 
-5. **Verification:**
+6. **Verification:**
    - Check Device Manager for missing drivers
    - Verify BIOS version
    - Confirm all applications present
