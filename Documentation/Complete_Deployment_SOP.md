@@ -269,8 +269,8 @@ All script files are provided in the Boot_Partition and Data_Partition folders.
 
 1. **RoboCopy files to USB:**
 ```cmd
-   robocopy `E:\GOLD_Image\USB\Boot\Deploy D:\Deploy /E`
-   robocopy `E:\GOLD_Image\USB\Data F:\ /E`
+   robocopy E:\GOLD_Image\USB\Boot\Deploy D:\Deploy /E
+   robocopy E:\GOLD_Image\USB\Data F:\ /E
 ```
    
 3. **Boot target system from USB:**
