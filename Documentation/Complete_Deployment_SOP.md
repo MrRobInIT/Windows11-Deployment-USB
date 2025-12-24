@@ -187,7 +187,7 @@ Dism /Online /Cleanup-Image /StartComponentCleanup /ResetBase
 
 6. **Run Sysprep:**
 ```cmd
-C:\Windows\System32\Sysprep\sysprep.exe /generalize /oobe /shutdown
+C:\Windows\System32\Sysprep\Sysprep.exe /generalize /oobe /shutdown /mode:vm
 ```
 
 7. **Mount VHDX on host after shutdown:**
