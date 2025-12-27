@@ -71,20 +71,23 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 
 ### Your Image Files (Not Included)
 Place your split image files in:
-- `Boot_Partition/Deploy/Images/install.swm`
-- `Boot_Partition/Deploy/Images/install2.swm`
-- `Boot_Partition/Deploy/Images/install3.swm`
+- `Boot_Partition/Deploy/Images/Win11Gold.swm`
+- `Boot_Partition/Deploy/Images/Win11Gold2.swm`
+- `Boot_Partition/Deploy/Images/Win11Gold3.swm`
 - etc.
 
 ### Your Driver Files (Not Included)
 Organize drivers by model in:
 - `Data_Partition/Drivers/Latitude-3440/`
 - `Data_Partition/Drivers/Latitude-5440/`
+- `Data_Partition/Drivers/Latitude-3520/`
 - `Data_Partition/Drivers/Latitude-5540/`
 - `Data_Partition/Drivers/Latitude-5550/`
+- `Data_Partition/Drivers/OptiPlex-7020Micro/`
+- `Data_Partition/Drivers/PC16250/`
 - `Data_Partition/Drivers/PRO16250/`
 - `Data_Partition/Drivers/PRO-QCM1250/`
-- `Data_Partition/Drivers/OptiPlex-7020Micro/`
+- `Data_Partition/Drivers/PRO-QxS1250/`
 - `Data_Partition/Drivers/Lenovo/`
 
 ### Your BIOS Updates (Not Included)
