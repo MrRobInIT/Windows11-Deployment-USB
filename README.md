@@ -55,6 +55,7 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 - Dell Latitude 5440
 - Dell Latitude 5540
 - Dell Latitude 5550
+- Dell Pro 14 PC14250
 - Dell Pro 16 PC16250
 - Dell Pro 16 Plus PB16250
 - Dell PRO QCM1250
@@ -84,6 +85,7 @@ Organize drivers by model in:
 - `Data_Partition/Drivers/Latitude-5540/`
 - `Data_Partition/Drivers/Latitude-5550/`
 - `Data_Partition/Drivers/OptiPlex-7020Micro/`
+- `Data_Partition/Drivers/PC14250/`
 - `Data_Partition/Drivers/PC16250/`
 - `Data_Partition/Drivers/PRO16250/`
 - `Data_Partition/Drivers/PRO-QCM1250/`
@@ -104,8 +106,6 @@ Organize BIOS updates by model in:
 ## Documentation
 
 - Complete Deployment SOP: [Documentation/Complete_Deployment_SOP.md](https://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/Complete_Deployment_SOP.md)
-- ISO Creation from Master USB (ImgBurn): [Documentation/SOP_Create_ISO_From_USB_ImgBurn.md](https://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/SOP_Create_ISO_From_USB_ImgBurn.md)
-- Burn ISO to 64GB USBs (Rufus): [Documentation/SOP_Burn_ISO_to_USB_Rufus.md](https://github.com/MrRobInIT/Windows11-Deployment-USB/blob/main/Documentation/SOP_Burn_ISO_to_USB_Rufus.md)
 
 Related:
 - Master USB Build SOP (WinPE, image prep/capture, `startnet.cmd`, `apply.cmd`, `createdisk_GPT.txt`, drivers, split WIMs).
