@@ -30,7 +30,7 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
    - Review all scripts before deployment
 
 2. **Prepare USB Drive**
-   - Use 64GB USB drive
+   - Use 128GB USB drive
    - Follow WinPE USB creation steps in SOP
 
 3. **Copy Files**
@@ -100,8 +100,8 @@ Organize BIOS updates by model in:
 
 ## Deployment Time
 - Image application: 15-30 minutes
-- Driver injection: 10-20 minutes
-- Total deployment: 30-45 minutes
+- Driver injection: 5-20 minutes
+- Total deployment: 20-45 minutes
 
 ## Documentation
 
