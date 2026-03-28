@@ -245,9 +245,12 @@ D:\
 |   ├── Latitude-3440\
 |   ├── Latitude-3520\
 |   ├── Latitude-5440\
+|.  ├── Latitude-5530\
 │   ├── Latitude-5540\
 │   ├── Latitude-5550\
+|.  ├── Latitude-7350D\
 │   ├── Latitude-PRO16250\
+|.  ├── PC14250\
 │   ├── PRO-QCM1250\
 │   ├── OptiPlex-7020Micro\
 |   ├── PRO-QxS1250\

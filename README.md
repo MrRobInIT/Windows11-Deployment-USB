@@ -132,5 +132,5 @@ Pull requests welcome for additional model support or improvements.
 RM 24OCT2025
 
 ## Version
-1.0.0 - Initial Release
-1.0.8 - Updated Release
+- 1.0.0 - Initial Release
+- 1.0.8 - Updated Release
