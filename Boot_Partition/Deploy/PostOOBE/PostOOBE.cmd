@@ -28,15 +28,24 @@ echo System Model: %MODEL% >> %LOGFILE%
 REM Map model to driver folder
 set DRIVER_FOLDER=
 if /i "%MODEL%"=="Latitude 3440" set DRIVER_FOLDER=Latitude-3440
+if /i "%MODEL%"=="Latitude 3520" set DRIVER_FOLDER=Latitude-3520
 if /i "%MODEL%"=="Latitude 5440" set DRIVER_FOLDER=Latitude-5440
+if /i "%MODEL%"=="Latitude 5530" set DRIVER_FOLDER=Latitude-5530
 if /i "%MODEL%"=="Latitude 5540" set DRIVER_FOLDER=Latitude-5540
 if /i "%MODEL%"=="Latitude 5550" set DRIVER_FOLDER=Latitude-5550
+if /i "%MODEL%"=="Latitude 7350 Detachable" set DRIVER_FOLDER=Latitude-7350D
+if /i "%MODEL%"=="Dell Pro 14 PC14250" set DRIVER_FOLDER=PC14250
 if /i "%MODEL%"=="Dell Pro 16 Plus PB16250" set DRIVER_FOLDER=PRO16250
-if /i "%MODEL%"=="Dell Pro 16 PC16250" set DRIVER_FOLDER=PRO16250
+if /i "%MODEL%"=="Dell Pro 16 PC16250" set DRIVER_FOLDER=PC16250
 if /i "%MODEL%"=="Dell Pro Micro QCM1250" set DRIVER_FOLDER=PRO-QCM1250
 if /i "%MODEL%"=="Dell Pro QCM1250" set DRIVER_FOLDER=PRO-QCM1250
+if /i "%MODEL%"=="Dell Pro Slim Plus QBS1250" set DRIVER_FOLDER=PRO-QxS1250
+if /i "%MODEL%"=="Dell Pro Slim QCS1250" set DRIVER_FOLDER=PRO-QxS1250
+if /i "%MODEL%"=="Dell Pro Slim QCS1255" set DRIVER_FOLDER=PRO-QxS1250
 if /i "%MODEL%"=="OptiPlex Micro 7020" set DRIVER_FOLDER=OptiPlex-7020Micro
 if /i "%MODEL%"=="21E3008BUS" set DRIVER_FOLDER=Lenovo
+if /i "%MODEL%"=="21AH00BPUS" set DRIVER_FOLDER=Lenovo
+if /i "%MODEL%"=="20QA000MUS" set DRIVER_FOLDER=Lenovo
 
 REM Install remaining drivers via PnPUtil
 if not "%DRIVER_FOLDER%"=="" (
@@ -47,11 +56,27 @@ if not "%DRIVER_FOLDER%"=="" (
 )
 
 REM Install Dell Command | Update if available
-if exist "%DATA_DRIVE%\Apps\Dell-Command-Update*.exe" (
+if exist "C:\Install\Dell-Command-Update*.exe" (
     echo Installing Dell Command Update... >> %LOGFILE%
-    for %%F in ("%DATA_DRIVE%\Apps\Dell-Command-Update*.exe") do (
+    for %%F in ("C:\Install\Dell-Command-Update*.exe") do (
         start /wait "" "%%F" /s >> %LOGFILE% 2>&1
     )
+)
+
+REM Install Security Apps | if available
+if exist "C:\Install\SentinelInstaller_windows_64bit_v25_1_3_334.msi" (
+    echo Installing Sentinel Agent... >> %LOGFILE%
+    start /wait "C:\Windows\System32\msiexec.exe" /i "C:\Install\SentinelInstaller_windows_64bit_v25_1_3_334.msi" SITE_TOKEN="eyJ1cmwiOiAiaHR0cHM6Ly91c2VhMS1uYWJsMTEuc2VudGluZWxvbmUubmV0IiwgInNpdGVfa2V5IjogIjQ5ZWE3MWJmZDkwY2VmYmNkOWVlNTg5MmQ3NGNhNjFjNjEwNmUxZjdmMzNlNWQwYjg1OGJhZTQ3OGEwNjc5ODgifQ==" /qb /norestart >> %LOGFILE% 2>&1
+)
+
+if exist "C:\Install\AdluminInstaller.msi" (
+    echo Installing Adlumin Agent... >> %LOGFILE%
+  start /wait "C:\Windows\System32\msiexec.exe" /i "C:\Install\AdluminInstaller.msi" /qb >> %LOGFILE% 2>&1
+)
+
+if exist "C:\Install\Qualys+Cloud+Security+Agent.msi" (
+    echo Installing Dell Qualys Agent... >> %LOGFILE%
+   start /wait "C:\Windows\System32\msiexec.exe" /i "C:\Install\Qualys+Cloud+Security+Agent.msi" /qb >> %LOGFILE% 2>&1
 )
 
 REM Apply BIOS updates if available
