@@ -52,9 +52,12 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 
 ## Supported Models
 - Dell Latitude 3440
+- Dell Latitude 3520
 - Dell Latitude 5440
+- Dell Latitude 5530
 - Dell Latitude 5540
 - Dell Latitude 5550
+- Dell Latitude 7350 Detachable
 - Dell Pro 14 PC14250
 - Dell Pro 16 PC16250
 - Dell Pro 16 Plus PB16250
@@ -65,6 +68,9 @@ Complete offline USB deployment solution for Dell Latitude, Precision laptops an
 - Dell Pro Slim QCS1255
 - Dell OptiPlex 7020Micro
 - Lenovo X1
+- Lenovo 21E3008BUS
+- Lenovo 21AH00BPUS
+- Lenovo 20QA000MUS
 
 (Add additional models by creating corresponding driver folders)
 
@@ -80,10 +86,13 @@ Place your split image files in:
 ### Your Driver Files (Not Included)
 Organize drivers by model in:
 - `Data_Partition/Drivers/Latitude-3440/`
-- `Data_Partition/Drivers/Latitude-5440/`
 - `Data_Partition/Drivers/Latitude-3520/`
+- `Data_Partition/Drivers/Latitude-5430/`
+- `Data_Partition/Drivers/Latitude-5440/`
+- `Data_Partition/Drivers/Latitude-5530/`
 - `Data_Partition/Drivers/Latitude-5540/`
 - `Data_Partition/Drivers/Latitude-5550/`
+- `Data_Partition/Drivers/Latitude-7350D/`
 - `Data_Partition/Drivers/OptiPlex-7020Micro/`
 - `Data_Partition/Drivers/PC14250/`
 - `Data_Partition/Drivers/PC16250/`
@@ -124,3 +133,4 @@ RM 24OCT2025
 
 ## Version
 1.0.0 - Initial Release
+1.0.8 - Updated Release
